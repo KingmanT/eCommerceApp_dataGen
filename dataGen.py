@@ -1,6 +1,6 @@
 import sqlite3
 import random
-from random import randint,
+from random import randint
 from faker import Faker
 from datetime import datetime
 
@@ -140,9 +140,8 @@ for _ in range(1000):
     ''', (card_id, user_id, card_number, exp_month, exp_year, customer_id, email, address_city, address_country, address_state, address_zip, name_on_card))
 
 
-# Commit changes and close the database connection
+# Commit changes to the database connection
 conn.commit()
-conn.close()
 
 # Product information manually created and organized into dictionary
 products = {
@@ -281,9 +280,8 @@ for _ in range(25):
         ) VALUES (?, ?, ?, ?, ?, ?)
     ''', (id, name, description, price, stock, image))
 
-# Commit changes and close the database connection
+# Commit changes to the database connection
 conn.commit()
-conn.close()
 
 # Create the "account_ordermodel" table
 cursor.execute('''
