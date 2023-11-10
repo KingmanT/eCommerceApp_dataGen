@@ -88,7 +88,7 @@ for _ in range(1000):
     is_superuser = random.choice([True, False])
     first_name = fake.first_name()
     last_name = fake.last_name()
-    username = first_name[0] + last_name + randint(100, 999)
+    username = first_name[0] + last_name + str(randint(100, 999))
     email = username.lower() + '@example.com'  # Email starts with the username
     is_staff = random.choice([True, False])
     is_active = random.choice([True, False])
